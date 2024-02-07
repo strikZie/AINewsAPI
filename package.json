@@ -1,10 +1,10 @@
 {
-  "name": "testapi",
-  "version": "1.0.0",
+  "name": "ai-news-api",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodem index.js"
   },
   "keywords": [],
   "author": "",
