@@ -2,10 +2,10 @@
   "name": "ai-news-api",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/Index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
