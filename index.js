@@ -137,7 +137,7 @@ async function ForEachSite(){
 
 }
 
-ForEachSite()
+await ForEachSite()
 
 
 
@@ -145,7 +145,7 @@ ForEachSite()
 
 app.get('/', (req, res) => {
     res.json('welcome')
-    
+
 })
 
 //get ai news from all newspapers registered
