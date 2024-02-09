@@ -137,7 +137,7 @@ async function ForEachSite(){
 
 }
 
-await ForEachSite()
+ForEachSite()
 
 
 
