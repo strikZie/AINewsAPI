@@ -139,7 +139,6 @@ async function ForEachSite(){
 
 }
 
-ForEachSite()
 
 
 
@@ -147,6 +146,8 @@ ForEachSite()
 
 app.get('/', (req, res) => {
     res.json('welcome')
+    ForEachSite().then(r => console.log('succesful scrape'))
+
 
 })
 
