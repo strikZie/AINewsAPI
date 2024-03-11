@@ -146,10 +146,7 @@ async function ForEachSite(){
 
 app.get('/', async (req, res) => {
     res.json('welcome')
-    for (let i = 0; i < newspapers.length; i++) {
-        await scrapeSite(newspapers[i])
-    }
-
+    await ForEachSite().then(r => console.log('succesful scrape'))
 
 })
 
