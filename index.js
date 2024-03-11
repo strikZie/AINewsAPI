@@ -93,7 +93,7 @@ async function ForEachSite(){
     }
 
 }
-
+await ForEachSite().then(r => console.log('succesful scrape')).then(r => console.log('test succes'))
 
 
 
