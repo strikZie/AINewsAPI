@@ -18,7 +18,52 @@ const newspapers = [
         address: 'https://www.bbc.com/news/topics/ce1qrvleleqt?page=',
         elementToTarget: 'a.exn3ah91, a.ej9ium92',
         base: 'https://www.bbc.com'
-    }
+    },
+    {
+        name: 'mit',
+        address: 'https://news.mit.edu/topic/artificial-intelligence2?page=',
+        elementToTarget: 'a.term-page--news-article--item--title--link',
+        base: 'https://news.mit.edu'
+    },
+    {
+        name: 'wired',
+        address: 'https://www.wired.com/tag/artificial-intelligence/?page=',
+        elementToTarget: 'a.ejgyuy',
+        base: 'https://www.wired.com'
+    },
+    /* fix later
+    {
+        name: 'financial-times',
+        address: 'https://www.ft.com/artificial-intelligence?page=',
+        elementToTarget: 'a.js-teaser-heading-link',
+        base: 'https://www.ft.com'
+    }, */
+    {
+        name: 'dailymail',
+        address: 'https://www.dailymail.co.uk/sciencetech/ai/index.html?page=',
+        elementToTarget: 'h2.linkro-darkred a',
+        base: ''
+    },
+    /* fix later
+    {
+        name: 'independent',
+        address: 'https://www.independent.co.uk/topic/ai',
+        elementToTarget: 'a.title',
+        base: 'https://www.independent.co.uk'
+    },*/
+    {
+        name: 'foxbusiness',
+        address: 'https://www.foxbusiness.com/category/artificial-intelligence?page=',
+        elementToTarget: 'h3.title a',
+        base: 'https://www.foxbusiness.com'
+    },
+    /* fix later
+    {
+        name: 'cbsnews',
+        address: 'https://www.cbsnews.com/tag/artificial-intelligence/',
+        elementToTarget: 'a.item__anchor',
+        base: ''
+    }*/
 ]
 
 const articles = []
@@ -93,16 +138,13 @@ async function ForEachSite(){
     }
 
 }
-await ForEachSite().then(r => console.log('succesful scrape')).then(r => console.log('test succes'))
 
 
 
 
 
 app.get('/', async (req, res) => {
-    await ForEachSite().then(r => console.log('succesful scrape')).then(r => res.json('welcome'))
-
-
+    await ForEachSite().then(r => res.json('welcome'))
 
 })
 
