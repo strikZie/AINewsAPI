@@ -34,8 +34,8 @@ let totalPages = 1
 
 
 async function scrapeSite(newspaper) {
-    page = 1
-    totalPages = 1
+    page = 43
+    totalPages = 43
 
 
     while(page <= totalPages) {
@@ -76,10 +76,9 @@ async function scrapeSite(newspaper) {
 
                     })
                 } else{
-
+                    console.log("")
                     totalPages = totalPages-1
-                    console.log('triggered' + totalPages + page)
-                    return;
+
                 }
 
 
@@ -87,6 +86,8 @@ async function scrapeSite(newspaper) {
                 console.log('ERROR site:' + newspaper.name + ' Page:' + page)
                 totalPages = totalPages-1
             })
+
+
     }
 }
 
@@ -97,7 +98,7 @@ async function ForEachSite(){
 
 }
 
-ForEachSite()
+ForEachSite().then(r => console.log('Succesful Scrape'))
 
 
 
