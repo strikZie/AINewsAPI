@@ -7,50 +7,7 @@ const cheerio = require('cheerio')
 const app = express()
 app.use('/favicon.ico', express.static('favicon.ico'));
 const newspapers = [
-    {
-        name: 'theguardian',
-        address: 'https://www.theguardian.com/technology/artificialintelligenceai?page=',
-        elementToTarget: 'a.js-headline-text',
-        base: ''
-    },
-    {
-        name: 'bbc',
-        address: 'https://www.bbc.com/news/topics/ce1qrvleleqt?page=',
-        elementToTarget: 'a.exn3ah91, a.ej9ium92',
-        base: 'https://www.bbc.com'
-    },
-    {
-        name: 'mit',
-        address: 'https://news.mit.edu/topic/artificial-intelligence2?page=',
-        elementToTarget: 'a.term-page--news-article--item--title--link',
-        base: 'https://news.mit.edu'
-    },
-    {
-        name: 'wired',
-        address: 'https://www.wired.com/tag/artificial-intelligence/?page=',
-        elementToTarget: 'a.ejgyuy',
-        base: 'https://www.wired.com'
-    },
-    /* fix later
-    {
-        name: 'financial-times',
-        address: 'https://www.ft.com/artificial-intelligence?page=',
-        elementToTarget: 'a.js-teaser-heading-link',
-        base: 'https://www.ft.com'
-    }, */
-    {
-        name: 'dailymail',
-        address: 'https://www.dailymail.co.uk/sciencetech/ai/index.html?page=',
-        elementToTarget: 'h2.linkro-darkred a',
-        base: ''
-    },
-    /* fix later
-    {
-        name: 'independent',
-        address: 'https://www.independent.co.uk/topic/ai',
-        elementToTarget: 'a.title',
-        base: 'https://www.independent.co.uk'
-    },*/
+
     {
         name: 'foxbusiness',
         address: 'https://www.foxbusiness.com/category/artificial-intelligence?page=',
@@ -119,8 +76,10 @@ async function scrapeSite(newspaper) {
 
                     })
                 } else{
-                    totalPages = totalPages-1
 
+                    totalPages = totalPages-1
+                    console.log('triggered' + totalPages + page)
+                    return;
                 }
 
 
