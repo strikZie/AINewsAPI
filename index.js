@@ -3,8 +3,9 @@ const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
 
-const app = express()
 
+const app = express()
+app.use('/favicon.ico', express.static('favicon.ico'));
 const newspapers = [
     {
         name: 'theguardian',
