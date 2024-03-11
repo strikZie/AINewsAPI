@@ -87,11 +87,11 @@ async function scrapeSite(newspaper) {
 
 
                 if(response.request._redirectable._redirectCount === 0){
-                    console.log('test1')
+                    console.log('not redirected')
                     page++
                     totalPages++
                 } else {
-                    console.log('test')
+                    console.log('redirected')
                     totalPages = totalPages-1
 
 
